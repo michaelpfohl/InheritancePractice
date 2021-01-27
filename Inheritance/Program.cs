@@ -1,6 +1,8 @@
 ﻿using System;
 using Inheritance.Pieces;
 using Inheritance.Pieces.Heads;
+using Inheritance.Pieces.Torsos;
+using Inheritance.Pieces.Legs;
 
 namespace Inheritance
 {
@@ -19,12 +21,17 @@ namespace Inheritance
 
             var skull = new SkullHead { Color = Color.Red, Condition = Condition.Flaming };
 
-            var heads = new Head[] { coolHead, nerdHead, skull };
+            var pirateWithHook = new PirateTorso(true);
+            var pirateWithoutHook = new PirateTorso(false);
+            var skeleton = new RibcageTorso(false, Condition.Old);
 
-            foreach(var head in heads)
-            {
-                head.Talk("C# is pretty damn cool!");
-            }
+            var spiderLegs = new Spider();
+            var discoLegs = new DiscoLegs();
+            var robotLegs = new RobotLegs();
+
+            var skullPirateSpider = new MiniFigure(skull, pirateWithHook, spiderLegs, "Bimple");
+            skullPirateSpider.MeetSomeone();
+
         }
     }
 }

@@ -23,7 +23,6 @@ namespace Inheritance.Pieces.Torsos
             else
             {
                 base.Wave();
-                Console.WriteLine($"the pirate gives you the finger");
             }
         }
     }

@@ -13,6 +13,7 @@ namespace Inheritance.Pieces
         Black,
         Red,
         Purple,
-        Yellow
+        Yellow,
+        White
     }
 }
